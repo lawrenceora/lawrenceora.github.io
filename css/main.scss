@@ -1,0 +1,28 @@
+h1{
+    font-family: 'Montserrat';
+    text-align: center;
+    color: white;
+}
+
+.s1{
+    background-color: blue;
+}
+
+.s2{
+    background-color: green;
+    h1 {
+        text-align: left;
+        margin-left: 2em;
+        font-size: 4rem;
+    }
+
+}
+
+.s3{
+    background-color: yellow;
+}
+
+span{
+    background: white !important;
+    position: absolute !important;
+}

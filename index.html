@@ -10,16 +10,21 @@
 </head>
 <body>
     <div id="fullpage">
+        <div class="section s0">
+            <h1>Hi, I'm Lawrence</h1>
+            <h2>I'm a software engineer based in Toronto, Canada</h2>
+        </div>
         <div class="section s1">
-
-            <h1>I'm 200%</h1>
+            <h1>Introduction</h1>
         </div>
         <div class="section s2">
-            <h1>The second section</h1>
+            <h1>Interests</h1>
         </div>
-
         <div class="section s3">
-            <h1>The third  section</h1>
+            <h1>Projects</h1>
+        </div>
+        <div class="section s4">
+            <h1>Contact</h1>
         </div>
     </div>
 
@@ -29,11 +34,9 @@
         new fullpage('#fullpage', {
             autoScrolling: true,
             navigation: true,
-            anchors: ['section1', 'section2', 'section3'],
-            navigationTooltips: ['Home', 'Yo', 'Da'],
-            scrollingSpeed: 700,
-            controlArrows: false,
-            slidesNavigation: true,
+            anchors: ['Landing', 'Introduction', 'Interests','Projects','Contact'],
+            navigationTooltips: ['Home', 'Intro', 'Interests','Projects','Contact'],
+            scrollingSpeed: 700
         })
 
     </script>

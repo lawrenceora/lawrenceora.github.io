@@ -11,6 +11,13 @@ h2 {
   color: white;
 }
 
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: 100;
+  color: white;
+}
+
 .s0 {
   background-color: #457ABF;
 }
@@ -21,12 +28,6 @@ h2 {
 
 .s2 {
   background-color: #F99E7C;
-}
-
-.s2 h1 {
-  text-align: left;
-  margin-left: 2em;
-  font-size: 4rem;
 }
 
 .s3 {

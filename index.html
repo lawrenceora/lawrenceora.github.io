@@ -3,56 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lawrence Ora</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css"/>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div id="fullpage">
-        <div class="section s0">
-            <h1>Hi, I'm Lawrence Ora.</h1>
-            <h2>I'm a software engineer residing in downtown Toronto, Canada. <br>
-            I hope this site gives you the impression that I am much more skilled than I actually am. </h2>
-        </div>
-        <div class="section s1">
-            <h1>I spend most of my time at the University of Toronto.</h1>
-            <h2>I'm currently 77.5% through my Bachelor's in Computer Science, with minors in Mathematics and Linguistics.<br>
-        If I'm not studying, you can usually find me at the University of Toronto, where I sustain myself either as a <br> Linguistics Research Asssistant or a CS Teaching Assistant.</h2>
-        </div>
-        <div class="section s2">
-            <h1>I find joy in exploring the following fields:</h1>
-            <h2>Computer Graphics,
-                Computational Linguistics,
-                and Systems Programming. </h2>
-        </div>
-        <div class="section s3">
-            <h1>I do most of my coding in C, C++ and Python.</h1>
-            <h2>But I'm also experienced in making apps on Android Studio and coding on a GPU.</h2>
-            <h3>At the moment, I'm working on my submission for Level-Up Toronto in April 2020. I'll be posting the trailer here soon.</h3>
-        </div>
-        <div class="section s4">
-            <h1>I'm currently looking for an internship for <u>Summer of 2020</u>.</h1>
-            <h2>If you would like to get in touch with me, or have a copy of my CV, feel free to email me at <u>lawrence.kenneth.ora@gmail.com</u>.
-        <br> One of my best qualities is how promply I respond. <br><br>
-    
-        Otherwise, check out my <a href="http://www.github.com/lawrenceora" style="color:#FFFFFF;">GitHub</a> and
-         <a href="https://www.linkedin.com/in/lawrenceora" style="color:#FFFFFF;">LinkedIn</a>,
-          but maybe not my  <a href="https://www.instagram.com/lawrence.ora/" style="color:#FFFFFF;">Instagram</a> or <a href="https://www.facebook.com/LawrenceOra" style="color:#FFFFFF;">Facebook</a>. </h2>
-        </div>
-    </div>
+    <section class="Landing">
+        <header>
+            <nav>
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul> 
+            </nav>
+        </header>
+        <h1>Hi. I'm Lawrence</h1>
+            <p>a software developer based in Singapore.</p>
+            <img src="images/avatar.svg" alt="avatar">
+            <h4>Scroll down...</h4>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
-
-    <script>
-        new fullpage('#fullpage', {
-            autoScrolling: true,
-            navigation: true,
-            anchors: ['Landing', 'Introduction', 'Interests','Projects','Contact'],
-            navigationTooltips: ['Home', 'Intro', 'Interests','Projects','Contact'],
-            scrollingSpeed: 700
-        })
-
-    </script>
+    </section>
+    <section class="About">
+        <h2>Welcome to my website</h2>
+        <p>I made this entire website from scratch.</p>
+        <p>I'm passionate about coding and I'm not even a frontend developer</p>
+        <p>I speak all of the languages in the greeting above as well as C, C++, Java, and Python</p>
+    </section>
+    <section class="Work">
+        <h2>Thing's I've been paid to do</h2>
+        <ul class="jobs">
+            <li>
+                <figure>
+                    <img src="images/sar21.svg" alt="work icon">
+                    <figcaption>SAF Military Sergeant, 2 years</figcaption>
+                </figure>
+                <blockquote>You were my favourite sergeant.</blockquote>
+            </li>
+            <li>
+                <figure>
+                    <img src="images/brain.svg" alt="work icon">
+                    <figcaption>NPL Research Assistant UofT 1 year</figcaption>
+                </figure>
+                <blockquote>What you did was really helpful.</blockquote>
+            </li>
+            <li>
+                <figure>
+                    <img src="images/computer.svg" alt="work icon">
+                    <figcaption>CS Teaching Assistant UofT Ongoing</figcaption>
+                </figure>
+                <blockquote>Thanks, Lawrence.</blockquote>  
+            </li>
+        </ul>
+    </section>
+    <section class="Contact">
+        <h2>If you would like to know more</h2>
+        <p>please feel free to email me at lawrence.kenneth.ora@gmail.com</p>
+        <p>Alternatively, you can click the links below for my resume, coding projects, and social media.</p>
+        <ul>
+            <li>
+                <a href="#"><img src="images/pdf.svg" alt="contact link"></a>
+                <a href="#"><img src="images/github.svg" alt="contact link"></a>
+                <a href="#"><img src="images/facebook.svg" alt="contact link"></a>
+                <a href="#"><img src="images/linkedin.svg" alt="contact link"></a>
+                <a href="#"><img src="images/instagram.svg" alt="contact link"></a>
+            </li>
+        </ul>
+        <footer>
+            2020 Created by Lawrence Ora
+        </footer>
+    </section>
 </body>
 </html>

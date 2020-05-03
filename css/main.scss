@@ -1,63 +1,52 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
-
-$colors: (
-    one: #B2EAA9,
-    two: #8ED6F5,
-    three: #F0A4A4,
-    four: #FDDBA8
-);
-
-@function color($name) {
-    @return map-get($colors, $name)
-};
-
-html {
-    scroll-snap-type: y mandatory;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-}
-
-html::-webkit-scrollbar{
-    display: none; /* Safari and Chrome */
-}
-
-body {
-    margin: 0;
+h1{
     font-family: 'Montserrat', sans-serif;
-}
-
-section {
-    scroll-snap-align: start;
     text-align: center;
-    padding: .8em 1.2em;
-    height: calc(100vh - 1.6em);
- 
-    &:nth-of-type(1){background: color(one)}
-    &:nth-of-type(2){background: color(two)}
-    &:nth-of-type(3){background: color(three)}
-    &:nth-of-type(4){background: color(four)}
+    color: white;
 }
 
-p, blockquote {
-    font-size: .9em;
-    line-height: 1.6em;
+h2{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 200;
+    color: white;
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 100;
+    color: white;
 }
 
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.s0{
+    background-color: #457ABF;
+
 }
 
-.hide-mobile {
-    display: none;
+.s1{
+    background-color: #1CA68A;
 }
 
-.jobs{
-    display: flex;
+.s2{
+    background-color: #F99E7C;
+    // h1 {
+    //     text-align: left;
+    //     margin-left: 2em;
+    // }
+    // h2 {
+    //     text-align: right;   
+    //     margin-right: 2em;
+    // }
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
+.s3{
+    background-color: #E5989B;
+}
+
+.s4{
+   background-color: #6D6875; 
+}
+
+
+span{
+    background: white !important;
 }

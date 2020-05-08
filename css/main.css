@@ -203,6 +203,7 @@ ul::-webkit-scrollbar {
   width: 100vw;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
+  z-index: -2;
 }
 
 .jobs li {

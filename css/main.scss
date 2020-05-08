@@ -36,7 +36,6 @@ body {
     color: color(text);
     text-align: center;   
     transform: skewY(-$skew);
-    overflow: visible;
 
     &:nth-of-type(1){
         background: color(1);
@@ -86,7 +85,6 @@ h1{
     padding: 12vh 0 0 0;
     font-weight: normal;
     font-size: 200%;
-    text-align: center;
 }
 
 .subheader {
@@ -137,7 +135,6 @@ p, blockquote {
     margin: 0em;
     line-height: 1.6em;
     font-size: .9em;
-    text-align: center;
 }
 
 h3 {
@@ -149,12 +146,10 @@ ul{
     list-style-type: none;
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
-    -webkit-overflow-scrolling: touch;
 }
 
 ul::-webkit-scrollbar {
     width: 0px; /* For Chrome, Safari, and Opera */
-    display: none;
 }
 
 .jobs{
@@ -162,8 +157,7 @@ ul::-webkit-scrollbar {
     display: flex;
     width: 100vw;
     overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    z-index: -2;
+    max-width: 100vw;
 }
 
 .jobs li{
@@ -187,7 +181,6 @@ figcaption{
     margin: 0;
     padding: 0;
     width: 100vw;
-    text-align: center;
 }
 
 .links li{
@@ -217,6 +210,6 @@ footer{
     width: 100vw;
     height: 1em;
     bottom: 1em;
-    background-color:color(text);
+    background-color: color(text);
     color: white;
 }

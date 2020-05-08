@@ -1,63 +1,222 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC");
+
+$colors: (
+    0: #B2EAA9,
+    1: #B2EAA9,
+    2: #8ED6F5,
+    3: #F0A4A4,
+    4: #FDDBA8,
+    text: #3D453B
+);
+
+$radius: 40px;
+$skew: 4deg;
+$layers: 4;
+
+@function color($name) {
+    @return map-get($colors, $name)
+};
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', 'Noto Sans SC';
+    background: linear-gradient(to bottom, color(0) 0%, color(0) 50%, color(4) 50%, color(4) 100%);
+}
+
+#fp-nav ul li .fp-tooltip {
+    color: color(text);
+}
+
+.section {
+    margin: 1em 0 -4em 0;
+    padding: .8em 0;
+    border-top-left-radius: 40px;
+    height: calc(100vh -1.6em);
+    color: color(text);
+    text-align: center;   
+    transform: skewY(-$skew);
+    overflow: visible;
+
+    &:nth-of-type(1){
+        background: color(1);
+    }
+    &:nth-of-type(2){
+        background: color(2); 
+    }
+    &:nth-of-type(3){
+        background: color(3);
+    }
+    &:nth-of-type(4){
+        background: color(4);
+    }
+}
+
+.section > * {
+    transform: skewY($skew);
+}
+
+.section:before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -39px;
+    right: 0;
+    z-index: -1;
+    background-color: inherit;
+}
+
+@for $i from 1 to $layers + 1{ 
+    .section:nth-of-type(#{$i}):after{
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        top: -80px;
+        right: 0;
+        z-index: 1;
+        background-color: color($i - 1);
+    }
+}
+
 h1{
-    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    padding: 12vh 0 0 0;
+    font-weight: normal;
+    font-size: 200%;
     text-align: center;
-    color: white;
+}
+
+.subheader {
+    padding: .2em;
+    color: #000000;
+}
+
+.avatar {
+    padding: 20vh 0 0 0;
+    width: 50%;
 }
 
 h2{
-    font-family: 'Montserrat', sans-serif;
+    padding: 15vh 0;
+    font-family: 'Noto Sans SC';
+    font-size: 0;
+}
+
+span:before{
+    content: '';
+    font-size: 2rem;
+    animation: greet infinite 9s;
+} 
+
+.subgreeting{
+    position: absolute; 
+    width: 95vw;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%) skewY($skew);
+}
+
+@keyframes greet{
+    0%, 100%{
+        content: "欢迎来到我的网站!";
+    }
+
+    33%{
+        content: "Kamusta sa aking websayt!"
+    }
+
+    66%{
+        content: "Welcome to my site!";
+    }
+}
+
+p, blockquote {
+    margin: 0em;
+    line-height: 1.6em;
+    font-size: .9em;
     text-align: center;
-    font-weight: 200;
-    color: white;
-}
-h3{
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    font-weight: 100;
-    color: white;
 }
 
-.s0{
-    background-color: #457ABF;
-
+h3 {
+    padding: 7vh 0 7vh 0;
+    font-size: 150%;
 }
 
-.img-avatar {
-    width: 250px;
+ul{
+    list-style-type: none;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+
+ul::-webkit-scrollbar {
+    width: 0px; /* For Chrome, Safari, and Opera */
+    display: none;
+}
+
+
+.jobs{
     position: relative;
-    left: 200px;
-    float: left;
+    display: flex;
+    width: 100vw;
+    overflow-x: scroll;
+    scrollbar-width: 0;
 }
 
-.intro{
-    float: right;
+.jobs li{
+    margin: 0 10px;
+    padding: 0 20px 0 0;
+    &:nth-of-type(3){
+        padding-right: 25vw;
+    }
 }
 
-.s1{
-    background-color: #1CA68A;
+.job-icon{
+    padding: 0 0 7vh 0;
 }
 
-.s2{
-    background-color: #F99E7C;
-    // h1 {
-    //     text-align: left;
-    //     margin-left: 2em;
-    // }
-    // h2 {
-    //     text-align: right;   
-    //     margin-right: 2em;
-    // }
+figcaption{
+    font-size: 120%;
 }
 
-.s3{
-    background-color: #E5989B;
+.links{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
 }
 
-.s4{
-   background-color: #6D6875; 
+.links li{
+    position: relative;
+    display: inline-block;
+    padding: 10% 0 0 0;
+    width: 27%;
 }
 
+.links li img{
+    width: 50%;
+}
 
-span{
-    background: white !important;
+.last{
+    font-size: 1.5em;
+    white-space: nowrap;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+footer{
+    position: absolute;
+    margin: 0;
+    padding: 1em 0;
+    width: 100vw;
+    height: 1em;
+    bottom: 1em;
+    background-color:color(text);
+    color: white;
 }

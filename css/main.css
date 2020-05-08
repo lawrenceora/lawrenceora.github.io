@@ -186,6 +186,7 @@ ul {
   /* For Firefox */
   -ms-overflow-style: none;
   /* For Internet Explorer and Edge */
+  -webkit-overflow-scrolling: touch;
 }
 
 ul::-webkit-scrollbar {

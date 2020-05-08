@@ -149,22 +149,19 @@ ul{
     list-style-type: none;
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
-    -webkit-overflow-scrolling: touch;
 }
-
 
 ul::-webkit-scrollbar {
     width: 0px; /* For Chrome, Safari, and Opera */
     display: none;
 }
 
-
 .jobs{
     position: relative;
     display: flex;
     width: 100vw;
     overflow-x: scroll;
-    scrollbar-width: 0;
+    -webkit-overflow-scrolling: touch;
 }
 
 .jobs li{

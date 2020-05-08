@@ -186,7 +186,6 @@ ul {
   /* For Firefox */
   -ms-overflow-style: none;
   /* For Internet Explorer and Edge */
-  -webkit-overflow-scrolling: touch;
 }
 
 ul::-webkit-scrollbar {
@@ -202,7 +201,7 @@ ul::-webkit-scrollbar {
   display: flex;
   width: 100vw;
   overflow-x: scroll;
-  scrollbar-width: 0;
+  -webkit-overflow-scrolling: touch;
 }
 
 .jobs li {

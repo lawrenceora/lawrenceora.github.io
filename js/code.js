@@ -3,11 +3,13 @@ var fullPage = new fullpage('#fullpage', {
     autoScrolling: true,
     navigation: false,
     verticalCentered: false,
-    normalScrollElements: '.jobs',
+    normalScrollElements: '#horizontal-scroll',
     anchors: ['Home', 'About', 'Work', 'Contact'],
     navigationTooltips: ['Home', 'About', 'Work', 'Contact']
 });
 
-$("swipe-fallthrough").on("swipe", function(){
-    alert("Swipe Detected");
+$(document).ready(function(){
+    $('#horizontal-scroll').on("swipe", function(){
+        alert("Swipe Detected");
+    });
 });

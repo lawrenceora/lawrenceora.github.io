@@ -9,6 +9,7 @@ new fullpage('#fullpage', {
 });
 
 // All this JS for overriding scroll for mobile.
+// Plus, this event probably does not work for firefox...
 document.getElementById("horizontal-scroll").addEventListener('touchstart', handleTouchStart, false);        
 document.getElementById("horizontal-scroll").addEventListener('touchmove', handleTouchMove, false);
 
@@ -39,12 +40,10 @@ function handleTouchMove(evt) {
 
     if (Math.abs(xDiff) < Math.abs(yDiff)){
         if (yDiff > 0) {
-            /* up swipe */ 
-            alert("should go down");    
+            /* up swipe */     
             fullpage_api.moveSectionDown();
         } else { 
             /* down swipe */
-            alert("should go up");
             fullpage_api.moveSectionUp();
         }                         
     } // else here, check xDiff for right and left swipes.

@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC");
 body {
-  margin: 0;
   font-family: 'Montserrat', 'Noto Sans SC';
   background: -webkit-gradient(linear, left top, left bottom, from(#B2EAA9), color-stop(50%, #B2EAA9), color-stop(50%, #FDDBA8), to(#FDDBA8));
   background: linear-gradient(to bottom, #B2EAA9 0%, #B2EAA9 50%, #FDDBA8 50%, #FDDBA8 100%);
@@ -107,11 +106,12 @@ h1 {
   margin: 0 auto;
   padding: 12vh 0 0 0;
   font-weight: normal;
-  font-size: 200%;
+  font-size: 8vw;
 }
 
 .subheader {
   padding: .2em;
+  font-size: 3.5vw;
   color: #000000;
 }
 
@@ -128,18 +128,9 @@ h2 {
 
 span:before {
   content: '';
-  font-size: 2rem;
+  font-size: 7vw;
   -webkit-animation: greet infinite 9s;
           animation: greet infinite 9s;
-}
-
-.subgreeting {
-  position: absolute;
-  width: 95vw;
-  top: 50vh;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) skewY(4deg);
-          transform: translate(-50%, -50%) skewY(4deg);
 }
 
 @-webkit-keyframes greet {
@@ -167,9 +158,21 @@ span:before {
 }
 
 p, blockquote {
-  margin: 0em;
   line-height: 1.6em;
-  font-size: .9em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.subgreeting {
+  position: absolute;
+  width: 95vw;
+  top: 50vh;
+  left: 50%;
+  font-size: 3vw;
+  -webkit-transform: translate(-50%, -50%) skewY(4deg);
+          transform: translate(-50%, -50%) skewY(4deg);
 }
 
 h3 {
@@ -216,6 +219,16 @@ figcaption {
   font-size: 120%;
 }
 
+.last {
+  font-size: 5.5vw;
+}
+
+.sub-last {
+  padding: .3em;
+  font-size: 4vw;
+  margin: 0 2vw;
+}
+
 .links {
   position: absolute;
   margin: 0;
@@ -234,18 +247,8 @@ figcaption {
   width: 50%;
 }
 
-.last {
-  font-size: 1.5em;
-  white-space: nowrap;
-}
-
-.bold {
-  font-weight: bold;
-}
-
 footer {
   position: absolute;
-  margin: 0;
   padding: 1em 0;
   width: 100vw;
   height: 1em;

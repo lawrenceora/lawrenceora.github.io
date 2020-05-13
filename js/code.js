@@ -1,8 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var frames = document.getElementById('horizontal-scroll');
-    frames.addEventListener('click', function (e) {
-        if (e.target.classList.contains('job')) {
-            e.target.parentNode.scrollLeft = e.target.offsetLeft;
-        }
-    });
-});
+var fullPage = new fullpage('#fullpage', {
+    fitToSection: false,
+    autoScrolling: true,
+    navigation: false,
+    verticalCentered: false,
+    normalScrollElements: '.jobs',
+    anchors: ['Home', 'About', 'Work', 'Contact'],
+    navigationTooltips: ['Home', 'About', 'Work', 'Contact']
+})

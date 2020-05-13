@@ -6,4 +6,8 @@ var fullPage = new fullpage('#fullpage', {
     normalScrollElements: '.jobs',
     anchors: ['Home', 'About', 'Work', 'Contact'],
     navigationTooltips: ['Home', 'About', 'Work', 'Contact']
-})
+});
+
+$("three").on("swipe", function(){
+    alert("Swipe Detected");
+});

@@ -8,8 +8,7 @@ new fullpage('#fullpage', {
     navigationTooltips: ['Home', 'About', 'Work', 'Contact']
 });
 
-// All this JS for overriding scroll for mobile.
-// Plus, this event probably does not work for firefox...
+// All this JS for overriding scroll for mobile, probably does not work on firefox.
 document.getElementById("horizontal-scroll").addEventListener('touchstart', handleTouchStart, false);        
 document.getElementById("horizontal-scroll").addEventListener('touchmove', handleTouchMove, false);
 

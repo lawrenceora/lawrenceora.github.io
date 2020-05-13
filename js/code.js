@@ -38,7 +38,6 @@ function handleTouchMove(evt) {
     var yDiff = yDown - yUp;
 
     if (Math.abs(xDiff) < Math.abs(yDiff)){
-        evt.preventDefault();
         if (yDiff > 0) {
             /* up swipe */     
             fullpage_api.moveSectionDown();

@@ -38,12 +38,14 @@ function handleTouchMove(evt) {
     var yDiff = yDown - yUp;
 
     if (Math.abs(xDiff) < Math.abs(yDiff)){
-        if ( yDiff > 0 ) {
+        if (yDiff > 0) {
             /* up swipe */ 
-            fullpage_api.moveSectionUp();
+            alert("should go down");
+            fullpage_api.moveSectionDown();
         } else { 
             /* down swipe */
-            fullpage_api.moveSectionDown();
+            alert("should go up");
+            fullpage_api.moveSectionUp();
         }                         
     } // else here, check xDiff for right and left swipes.
                                                 

@@ -1,4 +1,4 @@
-var fullPage = new fullpage('#fullpage', {
+new fullpage('#fullpage', {
     fitToSection: false,
     autoScrolling: true,
     navigation: false,
@@ -40,7 +40,7 @@ function handleTouchMove(evt) {
     if (Math.abs(xDiff) < Math.abs(yDiff)){
         if (yDiff > 0) {
             /* up swipe */ 
-            alert("should go down");
+            alert("should go down");    
             fullpage_api.moveSectionDown();
         } else { 
             /* down swipe */

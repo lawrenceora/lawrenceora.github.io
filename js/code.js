@@ -8,7 +8,7 @@ new fullpage('#fullpage', {
     navigationTooltips: ['Home', 'About', 'Work', 'Contact']
 });
 
-// All this JS for overriding scroll for mobile, probably does not work on firefox.
+// Vanilla JS for overriding scroll for mobile.
 document.getElementById("horizontal-scroll").addEventListener('touchstart', handleTouchStart, false);        
 document.getElementById("horizontal-scroll").addEventListener('touchmove', handleTouchMove, false);
 
@@ -21,6 +21,7 @@ function getTouches(evt) {
 }                                                     
 
 function handleTouchStart(evt) {
+    evt.preventDefault();
     const firstTouch = getTouches(evt)[0];                                      
     xDown = firstTouch.clientX;                                      
     yDown = firstTouch.clientY;                                      
@@ -38,6 +39,7 @@ function handleTouchMove(evt) {
     var yDiff = yDown - yUp;
 
     if (Math.abs(xDiff) < Math.abs(yDiff)){
+        evt.preventDefault();
         if (yDiff > 0) {
             /* up swipe */     
             fullpage_api.moveSectionDown();

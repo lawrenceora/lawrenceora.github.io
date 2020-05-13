@@ -143,22 +143,25 @@ p, blockquote {
     transform: translate(-50%, -50%) skewY($skew);
 }
 
+// Things I've been paid to do
 h3 {
     padding: 7vh 0 7vh 0;
-    font-size: 150%;
+    font-size: 5vw;
+    font-weight: bold;
 }
 
+// Hide scrollbar
 ul{
     list-style-type: none;
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
 }
-
 ul::-webkit-scrollbar {
     width: 0px; /* For Chrome, Safari, and Opera */
 }
 
 .jobs{
+    padding: 4vh;
     position: relative;
     display: flex;
     width: 100vw;
@@ -166,19 +169,21 @@ ul::-webkit-scrollbar {
 }
 
 .jobs li{
-    margin: 0 10px;
-    padding: 0 20px 0 0;
+    margin: 0 20vw 0 8vw;
+    padding: 0 0 0 0;
     &:nth-of-type(3){
-        padding-right: 25vw;
+        padding-right: 33vw;
     }
 }
 
 .job-icon{
-    padding: 0 0 7vh 0;
+    height: 60vw;
+    padding-bottom: 10vh;
 }
 
 figcaption{
-    font-size: 120%;
+    line-height: 4vh;
+    font-size: 5vw;
 }
 
 

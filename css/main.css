@@ -177,7 +177,8 @@ p, blockquote {
 
 h3 {
   padding: 7vh 0 7vh 0;
-  font-size: 150%;
+  font-size: 5vw;
+  font-weight: bold;
 }
 
 ul {
@@ -194,6 +195,7 @@ ul::-webkit-scrollbar {
 }
 
 .jobs {
+  padding: 4vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -203,20 +205,22 @@ ul::-webkit-scrollbar {
 }
 
 .jobs li {
-  margin: 0 10px;
-  padding: 0 20px 0 0;
+  margin: 0 20vw 0 8vw;
+  padding: 0 0 0 0;
 }
 
 .jobs li:nth-of-type(3) {
-  padding-right: 25vw;
+  padding-right: 33vw;
 }
 
 .job-icon {
-  padding: 0 0 7vh 0;
+  height: 60vw;
+  padding-bottom: 10vh;
 }
 
 figcaption {
-  font-size: 120%;
+  line-height: 4vh;
+  font-size: 5vw;
 }
 
 .last {

@@ -8,6 +8,6 @@ var fullPage = new fullpage('#fullpage', {
     navigationTooltips: ['Home', 'About', 'Work', 'Contact']
 });
 
-$("three").on("swipe", function(){
+$("swipe-fallthrough").on("swipe", function(){
     alert("Swipe Detected");
 });

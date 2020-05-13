@@ -28,6 +28,7 @@ function handleTouchStart(evt) {
 };                                                
 
 function handleTouchMove(evt) {
+    evt.preventDefault();
     if (!xDown || !yDown) {
         return;
     }

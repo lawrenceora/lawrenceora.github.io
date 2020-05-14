@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lawrence Ora</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -27,51 +28,27 @@
                 I speak all of the languages in the greeting above as well as <br> C, C++, Java, Python, HTML, CSS and Javascript.</p>
         </div>
         <!-- Section 3 -->
-        <div class="section" id="swipe-fallthrough"> 
+        <div class="section"> 
             <h3>Things I've been paid to do:</h3>
-
-            <div class="slider">              
-                <div class="slides">
-                    <figure> 1
-                        <!-- <img src="images/computer.svg" alt="work icon" class="job-icon">
-                        <figcaption>Teaching Assistant for Systems Programming Course taken at UofT</figcaption> -->
-                    </figure> 
-                    <figure> 2
-                        <!-- <img src="images/brain.svg" alt="work icon" class="job-icon" style="stroke-opacity: 0;">
-                        <figcaption>Natural Language Processing Research Assistant</figcaption> -->
-                    </figure>
-                    <figure> 3
-                        <!-- <img src="images/sar21.svg" alt="work icon" class="job-icon">
-                        <figcaption>Singapore Army Infantry Sergeant</figcaption> -->
-                    </figure>
-                </div>
-                <a href="#slide-1">1</a>
-                <a href="#slide-2">2</a>
-                <a href="#slide-3">3</a>
-              </div>
-        </div>
-
-            <!-- <ul class="jobs" id="horizontal-scroll">
-            <li class="job">
-                <figure>
+            <div class="gallery js-flickity" data-flickity-options='{ "cellAlign": "left", "contain": true }'>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <!-- <figure class='gallery-cell'>
                     <img src="images/computer.svg" alt="work icon" class="job-icon">
                     <figcaption>Teaching Assistant for Systems Programming Course taken at UofT</figcaption>
                 </figure> 
-            </li>
-            <li class="job">
-                <figure>
+                <figure class='gallery-cell'>
                     <img src="images/brain.svg" alt="work icon" class="job-icon" style="stroke-opacity: 0;">
                     <figcaption>Natural Language Processing Research Assistant</figcaption>
                 </figure>
-            </li>
-            <li class="job">
-                <figure>
+                <figure class='gallery-cell'>
                     <img src="images/sar21.svg" alt="work icon" class="job-icon">
                     <figcaption>Singapore Army Infantry Sergeant</figcaption>
-                </figure>
-            </li>
-            </ul>
-        </div> -->
+                </figure> -->
+            </div>
+        </div>
+
         <!-- Section 4 -->
         <div class="section four">   
             <h1 class="last">If you would like to get in touch</h1>
@@ -91,6 +68,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="js/code.js"></script>
 
 </body>

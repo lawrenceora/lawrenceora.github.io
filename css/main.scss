@@ -154,41 +154,108 @@ h3 {
     font-weight: bold;
 }
 
-// Hide scrollbar
-ul{
-    list-style-type: none;
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none; /* For Internet Explorer and Edge */
-}
-ul::-webkit-scrollbar {
-    width: 0px; /* For Chrome, Safari, and Opera */
+.slider {
+    width: calc(min(60vw, 300px));
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
 }
 
-.jobs{
-    padding: 4vh;
-    position: relative;
+.slides {
     display: flex;
-    width: 100vw;
-    overflow-x: scroll;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
-.jobs li{
-    margin: 0 20vw 0 8vw;
-    padding: 0 0 0 0;
-    &:nth-of-type(3){
-        padding-right: 33vw;
-    }
-}
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-.job-icon{
-    height: calc(min(60vw, 300px));
-    padding-bottom: 10vh;
-}
+  .slides > figure {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
 
-figcaption{
-    line-height: 4vh;
-    font-size: 5vw;
-}
+  .slider > a {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+  }
+  .slider > a:active {
+    top: 1px;
+  }
+  .slider > a:focus {
+    background: #000;
+  }
+
+    
+
+// // Hide scrollbar
+// ul{
+//     list-style-type: none;
+//     scrollbar-width: none; /* For Firefox */
+//     -ms-overflow-style: none; /* For Internet Explorer and Edge */
+// }
+// ul::-webkit-scrollbar {
+//     width: 0px; /* For Chrome, Safari, and Opera */
+// }
+
+// .jobs{
+//     padding: 4vh;
+//     position: relative;
+//     display: flex;
+//     width: 100vw;
+//     overflow-x: scroll;
+// }
+
+// .jobs li{
+//     margin: 0 20vw 0 8vw;
+//     padding: 0 0 0 0;
+//     &:nth-of-type(3){
+//         padding-right: 33vw;
+//     }
+// }
+
+// .job-icon{
+//     height: calc(min(60vw, 200px));
+//     padding-bottom: 10vh;
+// }
+
+// figcaption{
+//     line-height: 1.5em;
+//     font-size: calc(min(5vw, 17px));
+// }
 
 
 // If you would like to get in touch
@@ -232,4 +299,11 @@ footer{
     bottom: 1em;
     background-color: color(text);
     color: white;
+}
+
+
+@media only screen and (min-width:875px){
+    .jobs{
+        display: flex;
+    }
 }

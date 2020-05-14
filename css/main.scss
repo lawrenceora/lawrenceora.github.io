@@ -18,6 +18,10 @@ $layers: 4;
     @return map-get($colors, $name)
 };
 
+@function clamp($value, $max){
+    @return if($value > $max, $max, $value);
+}
+
 
 body {
     font-family: 'Montserrat', 'Noto Sans SC';
@@ -81,19 +85,19 @@ h1{
     margin: 0 auto;
     padding: 12vh 0 0 0;
     font-weight: normal;
-    font-size: 8vw;
+    font-size: calc(min(8vw, 40px));
 }
 
 // A software developer based in...
 .subheader {
     padding: .2em;
-    font-size: 3.5vw;
+    font-size: calc(min(3.5vw, 17.5px));
     color: #000000;
 }
 
 .avatar {
     padding: 20vh 0 0 0;
-    width: 50%;
+    width: calc(min(50vw, 250px));
 }
 
 // Welcome to my site HTML element.
@@ -106,7 +110,7 @@ h2{
 // Kamusta sa aking...
 span:before{
     content: '';
-    font-size: 7vw;
+    font-size: calc(min(7vw, 35px));
     animation: greet infinite 9s;
 } 
 
@@ -139,14 +143,14 @@ p, blockquote {
     width: 95vw;
     top: 50vh;
     left: 50%;
-    font-size: 3vw;
+    font-size: calc(min(3vw, 15px));
     transform: translate(-50%, -50%) skewY($skew);
 }
 
 // Things I've been paid to do
 h3 {
     padding: 7vh 0 7vh 0;
-    font-size: 5vw;
+    font-size: calc(min(5vw, 25px));
     font-weight: bold;
 }
 
@@ -177,7 +181,7 @@ ul::-webkit-scrollbar {
 }
 
 .job-icon{
-    height: 60vw;
+    height: calc(min(60vw, 300px));
     padding-bottom: 10vh;
 }
 
@@ -189,28 +193,30 @@ figcaption{
 
 // If you would like to get in touch
 .last{
-    font-size: 5.5vw;
+    font-size: calc(min(5.5vw, 27.5px));
 }
 
 // feel free to email me at
 .sub-last{
     padding: .3em;
-    font-size: 4vw;
+    font-size: calc(min(4vw, 20px));
     margin: 0 2vw;
 }
 
 .links{
     position: absolute;
-    margin: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     padding: 0;
-    width: 100vw;
+    width: calc(min(100vw, 500px));
 }
 
 .links li{
     position: relative;
     display: inline-block;
     padding: 10% 0 0 0;
-    width: 27%;
+    width: calc(min(27vw, 135px));
 }
 
 .links li img{

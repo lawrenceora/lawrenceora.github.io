@@ -15,13 +15,8 @@ $skew: 4deg;
 $layers: 4;
 
 @function color($name) {
-    @return map-get($colors, $name)
-};
-
-@function clamp($value, $max){
-    @return if($value > $max, $max, $value);
+    @return map-get($colors, $name);
 }
-
 
 body {
     font-family: 'Montserrat', 'Noto Sans SC';
@@ -139,6 +134,7 @@ p, blockquote {
 
 // I am currently...
 .subgreeting{
+    color: black;
     position: absolute; 
     width: 95vw;
     top: 50vh;
@@ -154,64 +150,70 @@ h3 {
     font-weight: bold;
 }
 
+// Slides
 .gallery {
-    background: #EEE;
+    background: color(3);
+}
+
+/* position outside */
+.flickity-prev-next-button.previous {
+    top: 20vh;
+}
+
+.flickity-prev-next-button.next {
+    top: 20vh;
+}
+
+.flickity-prev-next-button {
+    background: transparent;
+}
+
+.flickity-prev-next-button .arrow {
+    fill: white;
+}
+
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+
+.flickity-prev-next-button:disabled {
+    display: none;
+}
+
+/* white circles */
+.flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+    background: white;
 }
   
 .gallery-cell {
     width: 100%;
-    height: 200px;
+    height: 60vh;
+    margin-top: 10px;
     margin-right: 10px;
-    background: #8C8;
+    background: color(3);
     counter-increment: gallery-cell;
 }
-  
-/* cell number */
-.gallery-cell:before {
-    display: block;
-    text-align: center;
-    content: counter(gallery-cell);
-    line-height: 200px;
-    font-size: 80px;
-    color: white;
+
+.gallery-cell > img {
+    height: calc(min(50vw, 250px));
+    padding-bottom: 9vh;
 }
-    
 
-// // Hide scrollbar
-// ul{
-//     list-style-type: none;
-//     scrollbar-width: none; /* For Firefox */
-//     -ms-overflow-style: none; /* For Internet Explorer and Edge */
-// }
-// ul::-webkit-scrollbar {
-//     width: 0px; /* For Chrome, Safari, and Opera */
-// }
-
-// .jobs{
-//     padding: 4vh;
-//     position: relative;
-//     display: flex;
-//     width: 100vw;
-//     overflow-x: scroll;
-// }
-
-// .jobs li{
-//     margin: 0 20vw 0 8vw;
-//     padding: 0 0 0 0;
-//     &:nth-of-type(3){
-//         padding-right: 33vw;
-//     }
-// }
-
-// .job-icon{
-//     height: calc(min(60vw, 200px));
-//     padding-bottom: 10vh;
-// }
-
-// figcaption{
-//     line-height: 1.5em;
-//     font-size: calc(min(5vw, 17px));
-// }
+.gallery-cell > p {
+    line-height: 1.5em;
+    font-weight: bold;
+    font-size: calc(    min(5vw, 17px));
+    margin: 0 auto;
+    width: calc(min(75vw, 250px));
+}
 
 
 // If you would like to get in touch

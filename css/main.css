@@ -166,6 +166,7 @@ p, blockquote {
 }
 
 .subgreeting {
+  color: black;
   position: absolute;
   width: 95vw;
   top: 50vh;
@@ -182,25 +183,68 @@ h3 {
 }
 
 .gallery {
-  background: #EEE;
+  background: #F0A4A4;
+}
+
+/* position outside */
+.flickity-prev-next-button.previous {
+  top: 20vh;
+}
+
+.flickity-prev-next-button.next {
+  top: 20vh;
+}
+
+.flickity-prev-next-button {
+  background: transparent;
+}
+
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
 }
 
 .gallery-cell {
   width: 100%;
-  height: 200px;
+  height: 60vh;
+  margin-top: 10px;
   margin-right: 10px;
-  background: #8C8;
+  background: #F0A4A4;
   counter-increment: gallery-cell;
 }
 
-/* cell number */
-.gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
+.gallery-cell > img {
+  height: calc(min(50vw, 250px));
+  padding-bottom: 9vh;
+}
+
+.gallery-cell > p {
+  line-height: 1.5em;
+  font-weight: bold;
+  font-size: calc(    min(5vw, 17px));
+  margin: 0 auto;
+  width: calc(min(75vw, 250px));
 }
 
 .last {

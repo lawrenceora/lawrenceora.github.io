@@ -7,6 +7,10 @@ body {
   background: linear-gradient(to bottom, #B2EAA9 0%, #B2EAA9 50%, #FDDBA8 50%, #FDDBA8 100%);
 }
 
+#fp-nav {
+  visibility: hidden;
+}
+
 #fp-nav ul li .fp-tooltip {
   color: #3D453B;
 }
@@ -126,7 +130,7 @@ h2 {
   font-size: 0;
 }
 
-span:before {
+.greeting:before {
   content: '';
   font-size: calc(min(7vw, 35px));
   -webkit-animation: greet infinite 9s;
@@ -186,7 +190,6 @@ h3 {
   background: #F0A4A4;
 }
 
-/* position outside */
 .flickity-prev-next-button.previous {
   top: 20vh;
 }
@@ -211,7 +214,6 @@ h3 {
   display: none;
 }
 
-/* white circles */
 .flickity-page-dots .dot {
   width: 12px;
   height: 12px;
@@ -220,7 +222,6 @@ h3 {
   border: 2px solid white;
 }
 
-/* fill-in selected dot */
 .flickity-page-dots .dot.is-selected {
   background: white;
 }
@@ -288,10 +289,14 @@ footer {
 }
 
 @media only screen and (min-width: 875px) {
-  .jobs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  #fp-nav {
+    visibility: visible;
+  }
+  .flickity-prev-next-button.previous {
+    left: 25vw;
+  }
+  .flickity-prev-next-button.next {
+    right: 25vw;
   }
 }
 /*# sourceMappingURL=main.css.map */
